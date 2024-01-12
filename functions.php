@@ -17,3 +17,14 @@ add_action('wp_enqueue_scripts', function () {
 		true,
 	);
 });
+
+// Remove Wordpress
+add_filter(
+	'wp_enqueue_scripts',
+	function () {
+		wp_deregister_style('classic-theme-styles');
+		wp_dequeue_style('classic-theme-styles');
+		wp_dequeue_style('wp-block-library');
+	},
+	100,
+);
