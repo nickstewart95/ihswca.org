@@ -20,7 +20,10 @@
     </head>
     <body <?php body_class(); ?>>
 		<div class="wrapper">
-			<div class="notification"></div>
+			<div class="notification"><?php echo get_field(
+   	'header_notification',
+   	'option',
+   ); ?></div>
 			<header>
 				<h1>
 					<img
