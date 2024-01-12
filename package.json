@@ -1,0 +1,24 @@
+{
+	"name": "ihswca.org",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"clean": "rm -r dist/",
+		"start": "parcel watch res/index.js --no-source-maps",
+		"build": "parcel build res/index.js --no-source-maps"
+	},
+	"targets": {
+		"default": {
+			"distDir": "./res/build"
+		}
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"@parcel/transformer-sass": "^2.11.0",
+		"parcel": "^2.11.0"
+	}
+}
