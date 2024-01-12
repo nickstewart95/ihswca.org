@@ -19,3 +19,20 @@
 <?php wp_head(); ?>
     </head>
     <body <?php body_class(); ?>>
+		<div class="wrapper">
+			<div class="notification"></div>
+			<header>
+				<h1>
+					<img
+						src="<?php echo get_template_directory_uri(); ?>/res/img/logo.png"
+						alt="IHSWCA Logo"
+					/>
+					<span>IHSWCA</span>
+				</h1>
+				<navigation>
+                    <?php echo wp_nav_menu([
+                    	'theme_location' => 'header-navigation',
+                    ]); ?>
+				</navigation>
+				<a href="/membership" class="membership">Membership</a>
+			</header>

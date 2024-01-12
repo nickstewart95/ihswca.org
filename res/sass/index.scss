@@ -1,5 +1,151 @@
 @import 'variables.scss';
 
 body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 	margin: 0px;
+	padding: 0px;
+	font-size: 1rem;
+	background: $dark-grey;
+	font-family: $open-sans;
+	color: $black;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0px;
+	padding: 0px;
+	font-family: $hind;
+	font-weight: 400;
+}
+
+a {
+	color: $black;
+	text-decoration: underline;
+
+	&:hover {
+		cursor: pointer;
+	}
+
+	&:visited {
+		color: $black;
+	}
+}
+
+p {
+	line-height: 28px;
+}
+
+// Utility classes
+.clearfix {
+	display: block;
+	clear: both;
+}
+.wrapper {
+	margin-top: 20px;
+	margin-left: 20px;
+	margin-right: 20px;
+	width: calc(100% - 40px);
+	max-width: 1400px;
+	background-color: $light-grey;
+
+	@media only screen and (min-width: $desktop) {
+		margin-top: 40px;
+		margin-left: 40px;
+		margin-right: 40px;
+		width: calc(100% - 80px);
+	}
+
+	&::after {
+		content: '';
+		display: block;
+		height: 1px;
+	}
+}
+
+// Header
+.notification {
+	padding: 15px;
+	background-color: $dark-blue;
+	text-align: center;
+	font-size: 0.9rem;
+	color: $white;
+}
+header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	padding: 30px 40px;
+	background: $white;
+	font-size: 1rem;
+	border-bottom: solid 2px $light-grey;
+
+	@media only screen and (min-width: $desktop) {
+		flex-direction: row;
+	}
+
+	navigation {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+
+		a {
+			text-decoration: none;
+		}
+	}
+
+	ul {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		margin: 20px 0px;
+		padding: 0px;
+		list-style: none;
+
+		@media only screen and (min-width: $desktop) {
+			margin: 0px;
+		}
+
+		li {
+			margin-left: 10px;
+
+			@media only screen and (min-width: $desktop) {
+				margin-left: 40px;
+			}
+
+			&:first-of-type {
+				margin-left: 0px;
+			}
+		}
+	}
+
+	h1 {
+		display: flex;
+		align-items: center;
+		font-size: 1.2rem;
+
+		img {
+			margin-right: 10px;
+			max-width: 40px;
+		}
+	}
+
+	.membership {
+		padding: 16px 28px;
+		background: $blue;
+		border-radius: 4px;
+		color: $white;
+		text-decoration: none;
+
+		&:hover {
+			background: $dark-blue;
+		}
+	}
 }

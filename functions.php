@@ -25,7 +25,7 @@ add_action('wp_enqueue_scripts', function () {
 	);
 });
 
-// Remove Wordpress
+// Remove Wordpress block styles
 add_filter(
 	'wp_enqueue_scripts',
 	function () {
@@ -35,3 +35,9 @@ add_filter(
 	},
 	100,
 );
+
+// Register menus
+register_nav_menus([
+	'header-navigation' => 'Header Navigation',
+	'footer-navigation' => 'Footer Navigation',
+]);
