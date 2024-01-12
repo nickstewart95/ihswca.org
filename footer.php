@@ -1,4 +1,9 @@
-			<footer class="section">
+			<div class="section membership-signup">
+				<h2>Help Grow The Sport</h2>
+				<p>Join the IHSWCA today!</p>
+				<a href="/membership/signup/">Register</a>
+			</div>
+            <footer class="section">
 				<div class="links">
 					<h3>
 						<img
