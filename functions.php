@@ -39,5 +39,7 @@ add_filter(
 // Register menus
 register_nav_menus([
 	'header-navigation' => 'Header Navigation',
-	'footer-navigation' => 'Footer Navigation',
+	'footer-popular-pages' => 'Footer - Popular Pages',
+	'footer-wrestling-links' => 'Footer - Wrestling Links',
+	'footer-about' => 'Footer - About',
 ]);
