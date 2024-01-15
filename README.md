@@ -5,12 +5,17 @@ Wordpress theme for [Indiana High School Wrestling Coaches Association](https://
 ## Setup
 
 Uses Node v18
+Advanced Custom Fields is required
 
 ```
 npm install
 npm run build
 ```
 
-## Notes
+## Todo
 
-Advanced Custom Fields is required
+- [ ] Replace frontpage ACF Flexible Layout
+- [ ] Setup search page and results
+- [ ] Add search to the footer
+- [ ] Add Facebook icon to the footer
+- [ ] Add subtle gradients
