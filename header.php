@@ -39,3 +39,39 @@
 				</navigation>
 				<a href="/membership" class="membership">Membership</a>
 			</header>
+<?php
+if (is_page()) {
+	$args = [
+		'post_parent' => get_the_ID(),
+		'post_type' => 'page',
+		'numberposts' => -1,
+		'post_status' => 'published',
+	];
+	$children = get_children($args);
+
+	global $post;
+	$direct_parent = $post->post_parent;
+
+	if (!empty($children) || !empty($direct_parent)) { ?>
+            <ul class="subnav">
+				<?php
+    if (!empty($children)) { ?>
+				<li><?php echo $post->post_title; ?> Additional Content:</li>
+<?php foreach ($children as $child) { ?>
+                <li><a href="<?php echo get_post_field(
+                	'post_name',
+                	$child->ID,
+                ); ?>"><?php echo $child->post_title; ?></a></li>
+<?php }}
+    if (!empty($direct_parent)) { ?>
+                        <li class="direct-parent"><a href="<?php echo get_permalink(
+                        	$direct_parent,
+                        ); ?>"><i class="fas fa-arrow-left"></i> Back to <?php echo get_the_title(
+	$direct_parent,
+); ?></a></li>
+<?php }
+    ?>
+		</ul>
+<?php }
+}
+?>

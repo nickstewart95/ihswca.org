@@ -181,6 +181,35 @@ header {
 		}
 	}
 }
+.subnav {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 0px;
+	padding: 30px 40px;
+	list-style: none;
+
+	@media only screen and (min-width: $desktop) {
+		flex-direction: row;
+	}
+
+	li {
+		&:first-of-type {
+			margin-left: 0px !important;
+			opacity: 0.6;
+		}
+	}
+
+	a {
+		margin-left: 20px;
+		text-decoration: none;
+	}
+
+	.direct-parent {
+		margin-left: auto;
+		opacity: 1 !important;
+	}
+}
 
 // Footer
 footer {
