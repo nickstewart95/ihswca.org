@@ -6,12 +6,13 @@
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"clean": "rm -r dist/",
+		"format": "prettier {,*/**/***}*.{js,scss,php} --write",
 		"start": "parcel watch res/index.js --no-source-maps",
 		"build": "parcel build res/index.js --no-source-maps",
 		"prepare": "husky install"
 	},
 	"lint-staged": {
-		"*.{js,.scss,.php}": [
+		"{,*/**/***}*.{js,scss,php}": [
 			"prettier --write"
 		]
 	},
