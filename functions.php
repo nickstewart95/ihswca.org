@@ -44,7 +44,16 @@ register_nav_menus([
 	'footer-about' => 'Footer - About',
 ]);
 
-//Google Embed Shortcode
+// Set default title
+add_filter('the_title', function ($title) {
+	if (empty($title)) {
+		return 'Untitled';
+	}
+
+	return $title;
+});
+
+// Google Embed Shortcode
 add_action('google-doc', function ($atts) {
 	// Attributes
 	$attributes = shortcode_atts(
