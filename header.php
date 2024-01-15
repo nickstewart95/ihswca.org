@@ -39,8 +39,7 @@
 				</navigation>
 				<a href="/membership" class="membership">Membership</a>
 			</header>
-<?php
-if (is_page()) {
+<?php if (is_page()) {
 	$args = [
 		'post_parent' => get_the_ID(),
 		'post_type' => 'page',
