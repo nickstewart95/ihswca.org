@@ -43,3 +43,25 @@ register_nav_menus([
 	'footer-wrestling-links' => 'Footer - Wrestling Links',
 	'footer-about' => 'Footer - About',
 ]);
+
+//Google Embed Shortcode
+add_action('google-doc', function ($atts) {
+	// Attributes
+	$attributes = shortcode_atts(
+		[
+			'src' => '#',
+		],
+		$atts,
+	);
+
+	$source = $attributes['soruce'];
+
+	return <<<HTML
+		<div class="google-doc-src">
+			<span class="logo">Google Embed</span>
+			<span class="url"><a href="$source">Expand</a></span>
+			<div class="clearfix"></div>
+		</div>
+		<iframe src="$source" class="iframe"></iframe>
+	HTML;
+});
